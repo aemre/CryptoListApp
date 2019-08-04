@@ -1,0 +1,25 @@
+/**
+ * @format
+ */
+
+import 'react-native';
+import React from 'react';
+import App from '../App';
+import Adapter from 'enzyme-adapter-react-16';
+// Note: test renderer must be required after react-native.
+import renderer from 'react-test-renderer';
+import { NativeModules } from 'react-native';
+NativeModules.RNCNetInfo = {
+  getCurrentConnectivity: jest.fn(),
+  isConnectionMetered: jest.fn(),
+  addListener: jest.fn(),
+  removeListeners: jest.fn()
+};
+configure({adapter: new Adapter()});
+
+it('renders correctly', () => {
+  const tree = renderer.create(<App />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+
