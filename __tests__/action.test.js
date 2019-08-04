@@ -18,7 +18,7 @@ describe("select_actions", () => {
     // Runs before each test in the suite
     store.clearActions();
   });
-  describe("selectAvatar", () => {
+  describe("FetchCoinData", () => {
     test("Dispatches the correct action and payload", () => {
       store.dispatch(functionToTest());
       expect(store.getActions()).toMatchSnapshot();

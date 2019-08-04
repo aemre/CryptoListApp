@@ -10,3 +10,6 @@ Test with jest and enzyme:
   - CoinCard component snapshot test
   
   ### Screenshot
+![Screenshot](ss/ss1.png)
+![Screenshot](ss/ss2.png)
+![Screenshot](ss/ss3.png)
